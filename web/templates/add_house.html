@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mt-5 offset-3">
+        <h1 class="display-2">Dodaj nowy ród</h1>
+    </div>
+    <div class="col-md-6 mt-5 offset-3">
+        <form action="/add/house" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="form-group offset-2 col-md-8" style="padding:15px;">
+                    <label for="title">Nazwa </label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nazwa rodu">
+                </div>
+                <div class="form-group offset-2 col-md-8" style="padding:15px;">
+                    <label for="title">Motto </label>
+                    <input type="text" class="form-control" name="motto" id="motto" placeholder="Motto rodu">
+                </div>
+            </div>
+            <button type="submit" name="submit" class="offset-8 btn btn-large btn-dark" value="add_house"
+                style="margin-top:15px;">Dodaj</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+<table class='table'>
+    <tr class='tr'>
+        <td class='th'>Imię i nazwisko</td>
+        <td class='th'>Ród</td>
+    </tr>
+    {% for h in people %}
+    <tr class='tr'>
+        <td class='td'>{{h.name}}</td>
+        <td class='td'>{{h.house}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

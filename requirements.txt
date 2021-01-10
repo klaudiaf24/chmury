@@ -1,0 +1,7 @@
+Flask==1.0
+Jinja2==2.10
+Werkzeug==0.14.1
+WTForms==2.1
+neo4j
+flask_login
+gunicorn==20.0.4

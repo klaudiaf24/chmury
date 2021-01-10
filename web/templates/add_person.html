@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mt-5 offset-1">
+        <h1 class="display-2">Dodaj nowego członka</h1>
+    </div>
+    <div class="col-md-8 mt-5 offset-1">
+        <form action="/add/person" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="form-group offset-2 col-md-8" style="padding:15px;">
+                    <label for="name">Imię i nazwisko </label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Imię i nazwisko">
+                </div>
+                <div class="form-group offset-2 col-md-8" style="padding:15px;">
+                    <label for="title">Płeć </label><br>
+                    <label><input type="radio" name="gender" value="k" checked>kobieta</label>
+                    <label><input type="radio" name="gender" value="m">mężczyzna</label>
+                </div>
+                <div class="form-group offset-2 col-md-8" style="padding:15px;">
+                    <label for="title">Matka </label>
+                    <select class="form-control" name="mother" class="custom-select">
+                        <option value="0" class="list-group-item">brak danych</option>
+                        {% for row in women %}
+                        <option value="{{ row.name }}" class="list-group-item">{{ row.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group offset-2 col-md-8" style="padding:15px;">
+                    <label for="title">Ojciec </label>
+                    <select class="form-control" name="father" class="custom-select">
+                        <option value="0" class="list-group-item">brak danych</option>
+                        {% for row in men %}
+                        <option value="{{ row.name }}" class="list-group-item">{{ row.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group offset-2 col-md-8" style="padding:15px;">
+                    <label for="title">Ród </label>
+                    <select class="form-control" name="house" class="custom-select">
+                        {% for row in houses %}
+                        <option value="{{ row.name }}" class="list-group-item">{{ row.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <button type="submit" name="submit" class="offset-5 btn btn-large btn-dark" value="add_person"
+                style="margin-top:15px;">Dodaj
+                nowego członka rodziny</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

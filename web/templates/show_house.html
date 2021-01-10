@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+<table class='table'>
+    <tr class='tr'>
+        <td class='th'>Ród</td>
+        <td class='th'>Motto</td>
+    </tr>
+    {% for h in houses %}
+    <tr class='tr'>
+        <td class='td'>{{h.name}}</td>
+        <td class='td'>{{h.motto}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

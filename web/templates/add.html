@@ -1,0 +1,7 @@
+{% extends "index.html" %}
+{% block content %}
+<a href="{{ url_for('route_add_house_form') }}"><button class="btn btn-secondary btn-lg offset-4" type="button">
+                Dodaj nowy dom</button></a>
+<a href="{{ url_for('route_add_person_form') }}"><button class="btn btn-secondary btn-lg offset-1" type="button">
+                Dodaj nową osobe</button></a>
+{% endblock content %}

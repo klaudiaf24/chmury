@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="row">
+        <div class="col-md-6 mt-5 offset-3">
+                <h1 class="display-2">Wyszukiwanie</h1>
+        </div>
+        <div class="col-md-6 mt-5 offset-3">
+                <form action="/findperson" method="POST">
+                        <div class="form-group">
+                                <div class="form-group offset-1 col-md-10" style="padding:15px;">
+                                        <label for="register-name">Imię i nazwisko:</label>
+                                        <input name="name" type="name" class="form-control" id="register-name" value=""
+                                                placeholder="Podaj imię i nazwisko">
+                                </div>
+                                <button type="submit" name="submit" class="offset-6 col-md-4 btn btn-large btn-dark"
+                                        value="find">Wyszukaj</button>
+                        </div>
+                </form>
+        </div>
+</div>
+{% endblock content %}

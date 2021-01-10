@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% block content %}
+<table class='table'>
+    <tr class='tr'>
+        <td class='td'>Imię i nazwisko</td>
+        <td class='td'>{{name}}</td>
+    </tr>
+    <tr class='tr'>
+        <td class='td'>Ród</td>
+        <td class='td'> {{ house }}
+        </td>
+    </tr>
+    <tr class='tr'>
+        <td class='td'>Imię i nazwisko matki</td>
+        <td class='td'>{{mother}}</td>
+    </tr>
+    <tr class='tr'>
+        <td class='td'>Imię i nazwisko ojca</td>
+        <td class='td'>{{father}}</td>
+    </tr>
+    <tr class='tr'>
+        <td class='td'>Dzieci</td>
+        <td class='td'>{{children}}</td>
+    </tr>
+    <tr class='tr'>
+        <td class='td'>Rodzeństwo</td>
+        <td class='td'>{{siblings}}</td>
+    </tr>
+</table>
+</div>
+{% endblock content %}

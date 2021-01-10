@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+{% block content %}
+<a href="{{ url_for('route_find_person') }}"><button class="btn btn-secondary btn-lg offset-1" type="button">
+                Znajdź osobę</button></a>
+<a href="{{ url_for('route_show_house') }}"><button class="btn btn-secondary btn-lg offset-1" type="button">
+                Wyświetl liste wszystkich rodów w bazie</button></a>
+<a href="{{ url_for('route_show_all_people') }}"><button class="btn btn-secondary btn-lg offset-1" type="button">
+                Wyświetl wszystkie osoby w bazie</button></a>
+{% endblock content %}
